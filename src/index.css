@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--clr-bg-top: #1a212d;
+	--clr-bg-bottom: #0f1f3a;
+	--clr-link-hover: #27839f;
+	--clr-link-white: #fff;
+	--clr-link-normal: #c4c4c4;
+	--clr-link-sliver: #c4c4c4bf;
+	--clr-link-secondary: #4e704d;
+	--clr-link-black-20: rgba(0, 0, 0, 0.2);
+	--clr-link-black-50: rgba(0, 0, 0, 0.5);
+	--clr-transparent: transparent;
+
+	--clr-cv-main: #cfcfcfd9;
+	--clr-cv-aside: #f2f2f2bf;
+
+	--clr-dark-50: #171717;
+	--clr-dark-100: #1d1d1d;
+	--clr-dark-300: #232323;
+	--clr-dark-700: #3b3b3b;
+	--clr-dark-800: #474747;
+	--clr-dark-900: #cdcdcd;
+
+	--clr-red-50: #ffebeb;
+	--clr-red-100: #fcc5c5;
+	--clr-red-300: #f97777;
+	--clr-red-500: #f74f4f;
+	--clr-red-700: #ea0b0b;
+	--clr-red-900: #610505;
+
+	--clr-green-100: #92ffc3;
+	--clr-green-300: #00a149;
+	--clr-green-700: #00662e;
+	--clr-green-900: #002612;
+}
+
+@layer base {
+	html {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		min-height: 100vh;
+	}
+
+	body {
+		height: 100%;
+		background: var(--clr-bt-top);
+		background: linear-gradient(180deg, var(--clr-bg-top) 0%, var(--clr-bg-bottom) 100%);
+	}
+
+	#root {
+		height: 100vh;
+	}
+}
