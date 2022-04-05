@@ -22,8 +22,8 @@ jobs:
       # Deploy
       - uses: nekitcorp/yandex-storage-website-action@v1
         with:
-          accessKeyId: ${{ secrets.YANDEX_IAM_PUBLIC_KEY }}
-          secretAccessKey: ${{ secrets.YANDEX_IAM_PRIVATE_KEY }}
+          accessKeyId: ${{ secrets.YANDEX_STATIC_ACCESS_KEY_ID }}
+          secretAccessKey: ${{ secrets.YANDEX_STATIC_ACCESS_KEY_SECRET }}
           bucket: ${{ secrets.YANDEX_BUCKET }}
           path: './dist'
           clear: false
