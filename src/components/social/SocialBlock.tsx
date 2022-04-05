@@ -19,7 +19,7 @@ const SocialBlock = () => (
 				element={
 					<div className='m-0 p-0 font-bold'>
 						<FaGlobe className='inline' height={40} />
-						<span className='m-3'>www.ovsyukov.ru</span>
+						<span className='m-3 font-light text-sm xl:text-lg xl:font-bold'>www.ovsyukov.ru</span>
 					</div>
 				}
 				url={SocialUrls.SITE}
@@ -30,7 +30,7 @@ const SocialBlock = () => (
 				element={
 					<div className='xl::text-sm text-[0.7rem] font-extralight lg:font-light xl:font-normal'>
 						<FaEnvelope className='inline' />
-						<span className='m-3'>me@ovsyukov.ru</span>
+						<span className='m-3 font-light text-sm xl:text-lg xl:font-bold'>me@ovsyukov.ru</span>
 					</div>
 				}
 				url={SocialUrls.EMAIL_MAIN}
@@ -41,7 +41,7 @@ const SocialBlock = () => (
 				element={
 					<div className='xl::text-sm text-[0.7rem] font-extralight lg:font-light xl:font-normal'>
 						<FaEnvelope className='inline' />
-						<span className='m-3'>ovsyukov@yandex.com</span>
+						<span className='m-3 font-extralight text-xs xl:text-lg xl:font-bold'>ovsyukov@yandex.com</span>
 					</div>
 				}
 				url={SocialUrls.EMAIL}
@@ -60,7 +60,7 @@ const SocialBlock = () => (
         xl:font-normal'
 					>
 						<FaPhone className='inline' height={40} />
-						<span className='m-3'>+7 (962) 096 54 80</span>
+						<span className='m-3 font-light text-sm xl:text-lg xl:font-bold'>+7 (962) 096 54 80</span>
 					</div>
 				}
 				url={SocialUrls.TEL}

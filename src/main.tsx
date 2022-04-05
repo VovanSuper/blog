@@ -2,10 +2,10 @@ import App from 'App';
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { registerSW } from 'virtual:pwa-register';
+// import { registerSW } from 'virtual:pwa-register';
 import './index.css';
 
-registerSW();
+// registerSW();
 
 const MAX_RETRIES = 1;
 const queryClient = new QueryClient({
