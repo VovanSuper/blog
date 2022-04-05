@@ -4,6 +4,8 @@ import LoadingOrError from 'components/LoadingOrError';
 import type { ReactElement } from 'react';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import BgImg from './assets/codez3.jpg';
+
 
 const Home = lazy(async () => import('pages/Home'));
 const Blog = lazy(async () => import('pages/Blog'));
@@ -16,20 +18,19 @@ export default function App(): ReactElement {
 				<div className='grid h-full min-w-full grid-rows-[5rem_auto_4rem]'>
 					<img
 						className='
-					opacity-15 
-					absolute
-					inset-0 
-					top-20  
-					-z-10 
-					max-h-[60%]
-					w-full
-					-skew-y-6 
-					object-cover
-					blur-sm
-					
+							opacity-15 
+							absolute
+							inset-0 
+							top-20  
+							-z-10 
+							max-h-[60%]
+							w-full
+							-skew-y-6 
+							object-cover
+							blur-sm
 					'
-						src='/src/assets/codez3.jpg'
-						alt='code'
+						src={BgImg}
+						alt='Background'
 					/>
 					<Head title='Home' />
 					<section className='mx-[120px]'>

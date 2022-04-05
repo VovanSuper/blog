@@ -1,4 +1,6 @@
-export default ({ group }: { group: string }) => (
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
+export default ({ group }: { group: string; }) => (
 	<svg width='33' height='24' viewBox='0 0 33 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
 		<path
 			className={`
