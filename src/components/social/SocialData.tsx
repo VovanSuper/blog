@@ -60,7 +60,7 @@ export enum SocialUrls {
 	FB = 'https://fb.com/ovsyukov',
 	STACKOVERFLOW = 'https://stackoverflow.com/users/2499866/vovan-super?tab=profile',
 	LINKEDIN = 'https://linkedin.com/in/ovsyukov',
-	SITE = 'https://ovsyukov.ru',
+	SITE = 'https://www.ovsyukov.ru',
 	EMAIL_MAIN = 'mailto:me@ovsyukov.ru',
 	EMAIL = 'mailto:ovsyukov@yandex.com',
 	TEL = 'tel:+79620965480',
@@ -68,3 +68,4 @@ export enum SocialUrls {
 
 export type { SocialDataProps };
 export { SocialIcon, FacebookLogo, LinkedInLogo, GitHubLogo };
+

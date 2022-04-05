@@ -19,7 +19,7 @@ const SocialBlock = () => (
 				element={
 					<div className='m-0 p-0 font-bold'>
 						<FaGlobe className='inline' height={40} />
-						<span className='m-3'>ovsyukov.ru</span>
+						<span className='m-3'>www.ovsyukov.ru</span>
 					</div>
 				}
 				url={SocialUrls.SITE}

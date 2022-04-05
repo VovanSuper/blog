@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      # Build
+      - run: npm i
+      - run: npm run build
+      # Deploy
+      - uses: nekitcorp/yandex-storage-website-action@v1
+        with:
+          accessKeyId: ${{ secrets.YANDEX_IAM_PUBLIC_KEY }}
+          secretAccessKey: ${{ secrets.YANDEX_IAM_PRIVATE_KEY }}
+          bucket: ${{ secrets.YANDEX_BUCKET }}
+          path: './dist'
+          clear: false
