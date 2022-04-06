@@ -11,7 +11,7 @@ export interface SkillWrapperProps {
 	count?: number;
 }
 
-const SkillMeterBox = ({ count = SkillMeterBlocks }: { count: number }) => (
+const SkillMeterBox = ({ count = SkillMeterBlocks }: { count: number; }) => (
 	<div className='container flex min-w-full justify-end gap-4'>
 		<div className='mx-4 font-bold leading-9 text-green900'>
 			<small className='m-1 mx-4 border-b-2 font-light text-linkHover'>Level: </small>
@@ -180,7 +180,7 @@ const BackEndSkills = () => (
 		bg='bg-linkHover'
 		color='text-black50'
 		count={4}
-		skills={['Node.js', 'NextJs', 'Nest.js', 'typeOrm', 'knex', 'mongoose', 'sequelize', '.Net Framework', 'asp.net', 'entity framework', 'Python', 'Docker', 'Docker Compose']}
+		skills={['Node.js', 'NextJs', 'Nest.js', 'typeOrm', 'knex', 'mongoose', 'sequelize', '.Net Framework', 'asp.net', 'entity framework', 'Docker', 'Docker Compose']}
 	/>
 );
 

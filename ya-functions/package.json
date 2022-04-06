@@ -1,0 +1,20 @@
+{
+  "name": "ya-functions",
+  "version": "0.0.1",
+  "description": "yandex cloud function app to put message to ydb",
+  "main": "messages.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Yandex cloud",
+    "Function",
+    "Ydb"
+  ],
+  "author": "VovanSuper",
+  "license": "GPLv3",
+  "dependencies": {
+    "uuid": "^8.3.2",
+    "ydb-sdk": "^3.0.0"
+  }
+}

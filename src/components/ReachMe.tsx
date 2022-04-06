@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 import Arrow from './Arrow';
 
 interface ReachMeProps {
-	href?: string;
+  href?: string;
 }
 
-const ReachMe = ({ href = '/about' }: ReachMeProps) => (
-	<div
-		className='
+const ReachMe = ({ href = '/contact' }: ReachMeProps) => (
+  <div
+    className='
   group 
   flex 
   cursor-pointer
@@ -19,12 +19,12 @@ const ReachMe = ({ href = '/about' }: ReachMeProps) => (
   hover:text-linkSilver
   md:ml-auto
   '
-	>
-		<NavLink className='flex gap-2' to={href}>
-			<Arrow group='group' />
-			<span className='hidden md:block'>Reach Me </span>
-		</NavLink>
-	</div>
+  >
+    <NavLink className='flex gap-2' to={href}>
+      <Arrow group='group' />
+      <span className='hidden md:block group-hover:text-linkWhite'>Reach Me </span>
+    </NavLink>
+  </div>
 );
 
 export default ReachMe;

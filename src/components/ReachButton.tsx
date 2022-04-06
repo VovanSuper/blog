@@ -2,10 +2,10 @@ import { useNavigate } from 'react-router-dom';
 import ArrowBig from './ArrowBig';
 
 const ReachMeBig = () => {
-	const navigate = useNavigate();
-	return (
-		<div
-			className='
+  const navigate = useNavigate();
+  return (
+    <div
+      className='
       group-transition-translate-all 
       transition-translate-all
       group
@@ -25,13 +25,13 @@ const ReachMeBig = () => {
       xl:translate-x-0
       xl:gap-5
     '
-			role='button'
-			onClick={() => navigate('/about')}
-		>
-			<ArrowBig group='group' width={180} />
-			<span className='text-2xl font-bold text-linkWhite group-hover:text-linkSecondary'>Reach Me </span>
-		</div>
-	);
+      role='button'
+      onClick={() => navigate('/contact')}
+    >
+      <ArrowBig group='group' width={180} />
+      <span className='text-2xl font-bold text-linkWhite group-hover:text-linkSecondary'>Reach Me </span>
+    </div>
+  );
 };
 
 export default ReachMeBig;

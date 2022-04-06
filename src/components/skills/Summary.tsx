@@ -1,7 +1,7 @@
 export default () => (
   <div className='user-info w-full'>
     <h2 className='mb-4 text-xl font-bold'>Summary:</h2>
-    <ul className='list-disc text-sm font-light'>
+    <ul className='list-disc text-sm font-light tracking-normal xl:font-semibold xl:tracking-wider'>
       <li>
         <p>Deep knowledge of core Computing and Software development methodologies.</p>
       </li>
@@ -15,10 +15,9 @@ export default () => (
         <p>Fundamental approaches in core engineering practice to produce software for new, innovative, and profitable solutions.</p>
       </li>
       <li>
-        <p>1Practicing Agile methodologies gathering user requirements, creating software designs and integration;</p>
+        <p>Practicing Agile methodologies gathering user requirements, creating software designs and integration;</p>
       </li>
     </ul>
     <hr className='my-4 text-linkBlack20' />
-    HELLO
   </div>
 );

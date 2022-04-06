@@ -2,7 +2,7 @@ import { FaEnvelope, FaFacebookSquare, FaGithubAlt, FaGlobe, FaLinkedin, FaMapMa
 import { SocialIcon, SocialUrls } from './SocialData';
 
 const SocialBlock = () => (
-	<div className='social-data w-full rounded-md border-2 border-bgTop py-3 px-2 xl:w-auto'>
+	<div className='social-data w-full rounded-md border-2 border-bgTop py-3 px-1 xl:px-5 xl:w-auto'>
 		<div className='leading-3'>
 			<SocialIcon
 				element={

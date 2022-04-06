@@ -8,12 +8,18 @@ import { VitePWA } from 'vite-plugin-pwa';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(({ mode }) => ({
+	define: {
+		'process.env': process.env
+	},
+	envDir: process.cwd(),
+	envPrefix: 'REACT_APP_PUBLIC',
 	test: {
 		include: ['src/**/__tests__/*'],
 		globals: true,
 		environment: 'jsdom',
 		setupFiles: 'src/setupTests.ts',
 		clearMocks: true,
+
 		coverage: {
 			enabled: true,
 			'100': true,
@@ -28,28 +34,28 @@ export default defineConfig(({ mode }) => ({
 		viteCommonjs(),
 		...(mode !== 'test'
 			? [
-					eslintPlugin(),
-					VitePWA({
-						registerType: 'autoUpdate',
-						includeAssets: ['public/icons/*.*', 'robots.txt', 'fonts/*.woff2', 'assets/*.*'],
-						manifest: {
-							theme_color: '#BD34FE',
-							icons: [
-								{
-									src: '/android-chrome-192x192.png',
-									sizes: '192x192',
-									type: 'image/png',
-									purpose: 'any maskable',
-								},
-								{
-									src: '/android-chrome-512x512.png',
-									sizes: '512x512',
-									type: 'image/png',
-								},
-							],
-						},
-					}),
-			  ]
+				eslintPlugin(),
+				VitePWA({
+					registerType: 'autoUpdate',
+					includeAssets: ['public/icons/*.*', 'robots.txt', 'fonts/*.woff2', 'assets/*.*'],
+					manifest: {
+						theme_color: '#BD34FE',
+						icons: [
+							{
+								src: '/android-chrome-192x192.png',
+								sizes: '192x192',
+								type: 'image/png',
+								purpose: 'any maskable',
+							},
+							{
+								src: '/android-chrome-512x512.png',
+								sizes: '512x512',
+								type: 'image/png',
+							},
+						],
+					},
+				}),
+			]
 			: []),
 	],
 }));

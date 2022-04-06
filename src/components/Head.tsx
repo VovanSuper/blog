@@ -11,6 +11,7 @@ interface Props extends HTMLAttributes<HTMLHeadElement> {
 const menuItems = [
 	{ title: 'Home', href: '/home' },
 	{ title: 'Blog', href: '/blog' },
+	{ title: 'Contact', href: '/contact' },
 	{ title: 'About', href: '/about' },
 ];
 
@@ -21,11 +22,12 @@ const Head: FC<Props> = ({ children }: Props) => (
 			w-full
 			flex-col
 			items-center
-			bg-bgTop 
+			bg-bgTop
+			px-5
 			md:grid 
 			md:min-h-[4rem] 
 			md:grid-cols-3
-			md:px-32
+			md:px-12
 			'
 	>
 		<Logo />
