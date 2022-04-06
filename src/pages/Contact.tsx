@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-misused-promises */
-/* eslint-disable @typescript-eslint/no-floating-promises */
 import type { FirebaseOptions } from "firebase/app";
 import { initializeApp } from "firebase/app";
 import { getDatabase, onValue, ref, set } from "firebase/database";
