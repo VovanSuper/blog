@@ -10,7 +10,7 @@ interface Props extends HTMLAttributes<HTMLHeadElement> {
 
 const menuItems = [
 	{ title: 'Home', href: '/home' },
-	{ title: 'Blog', href: '/blog' },
+	{ title: 'Blog', href: '/blog', isEnabled: false },
 	{ title: 'Contact', href: '/contact' },
 	{ title: 'About', href: '/about' },
 ];
