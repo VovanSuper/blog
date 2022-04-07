@@ -54,6 +54,17 @@ const GitHubLogo = ({ fill = 'linkHover' }: { fill?: string; }) => (
 	</div>
 );
 
+const CVLogo = ({ fill = 'linkHover' }: { fill?: string; }) => (
+	<div className='p-1'>
+		<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path
+				className={`fill-${fill} hover:fill-linkSilver`}
+				d="M7.71429 0.125C3.45536 0.125 0 3.56836 0 7.8125V64.1875C0 68.4316 3.45536 71.875 7.71429 71.875H64.2857C68.5446 71.875 72 68.4316 72 64.1875V7.8125C72 3.56836 68.5446 0.125 64.2857 0.125H7.71429ZM23.6057 21.4633C26.7615 21.4633 29.5653 22.5506 31.63 24.1813C33.5393 25.6951 34.4335 27.2093 35.2136 28.5684L29.7617 31.2829C29.3717 30.3916 28.9024 29.4592 27.6972 28.451C26.3716 27.4017 25.0489 27.0923 23.9165 27.0923C19.4766 27.0923 17.1392 31.2072 17.1392 35.7867C17.1392 41.8042 20.2187 44.7907 23.9165 44.7907C27.5005 44.7907 28.9434 42.3066 29.8758 40.7171L35.2929 43.4729C34.2779 45.0626 33.3042 46.6176 31.1223 48.1285C29.9552 48.9437 27.2689 50.5367 23.4505 50.5367C16.1656 50.5367 10.2857 45.2586 10.2857 35.9792C10.2857 27.8695 15.8167 21.4633 23.6057 21.4633ZM35.7369 22.3166H43.0599L48.7463 41.8041L54.3913 22.3166H61.7143L52.1712 49.7212H45.1623L35.7369 22.3166Z" fill="black" />
+		</svg>
+
+	</div>
+);
+
 export enum SocialUrls {
 	GITHUB = 'https://github.com/VovanSuper',
 	TWITTER = 'https://twitter.com/OvsyukovV',
@@ -67,5 +78,5 @@ export enum SocialUrls {
 }
 
 export type { SocialDataProps };
-export { SocialIcon, FacebookLogo, LinkedInLogo, GitHubLogo };
+export { SocialIcon, FacebookLogo, LinkedInLogo, GitHubLogo, CVLogo };
 

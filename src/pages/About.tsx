@@ -11,6 +11,7 @@ import {
 } from 'components/skills/SkillBlocks';
 import Summary from 'components/skills/Summary';
 import { SocialBlock } from 'components/social';
+import CvLink from 'components/social/github/CvLink';
 import ProjectLink from 'components/social/github/ProjectLink';
 import InterestsBlock from 'components/social/InterestsBlock';
 import LanguagesBlock from 'components/social/LanguagesBlock';
@@ -21,7 +22,6 @@ import ProfilePhoto from '../assets/profile.jpg';
 const About = (): ReactElement => (
 	<section className='relative grid h-full w-full place-content-center'>
 		<div className='relative container grid h-auto w-full grid-cols-[1fr_2fr] xl:grid-cols-[1fr_3fr]'>
-			<ProjectLink />
 			<article className='border-r-2 bg-cvMain p-10 text-dark50'>
 				<div className='user-info flex flex-col items-center gap-10'>
 					<div className='user-img'>
@@ -37,7 +37,9 @@ const About = (): ReactElement => (
 				</div>
 			</article>
 
-			<article className='border-r-2 bg-cvAside p-10'>
+			<article className=' border-r-2 bg-cvAside p-10'>
+
+				<CvLink />
 				<Summary />
 
 				<div className='skills'>
@@ -53,6 +55,7 @@ const About = (): ReactElement => (
 				</div>
 			</article>
 		</div>
+		<ProjectLink />
 	</section>
 );
 

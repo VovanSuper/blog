@@ -59,32 +59,6 @@ module.exports = {
 			screens: {
 				xs: '400px',
 			},
-			// textColor: {
-			// 	...foregroundColors,
-			// 	primary: primaryColors,
-			// 	on: {
-			// 		primary: primaryInvertedColors,
-			// 	},
-			// 	fg: {
-			// 		primary: primaryForegroundColors,
-			// 	},
-			// },
-			// backgroundColor: {
-			// 	...backgroundColors,
-			// 	primary: primaryColors,
-			// 	fg: {
-			// 		...foregroundColors,
-			// 		primary: primaryColors,
-			// 	},
-			// },
-			// borderColor: {
-			// 	background: backgroundColors,
-			// 	foreground: foregroundColors,
-			// 	primary: primaryColors,
-			// 	bg: {
-			// 		primary: primaryColors,
-			// 	},
-			// },
 			padding: {
 				'1/3': '33.333%',
 				'1/2': '50%',
