@@ -25,6 +25,7 @@
       to avoid connecting the SDK to running emulators.
     -->
 	<script defer src="/__/firebase/init.js?useEmulator=true"></script>
+	
 
 	<style media="screen">
 		body {
@@ -141,6 +142,15 @@
 				loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
 			}
 		});
+	</script>
+	<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+	<script>
+	  kofiWidgetOverlay.draw('vovansuper', {
+	    'type': 'floating-chat',
+	    'floating-chat.donateButton.text': 'Support me',
+	    'floating-chat.donateButton.background-color': '#00bfa5',
+	    'floating-chat.donateButton.text-color': '#fff'
+	  });
 	</script>
 </body>
 
