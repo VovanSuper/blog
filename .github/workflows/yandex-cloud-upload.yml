@@ -32,7 +32,7 @@ jobs:
       - uses: nekitcorp/yandex-storage-website-action@v2
         with:
           access-key-id: ${{ secrets.YANDEX_STATIC_ACCESS_KEY_ID }}
-          secret-access-ley: ${{ secrets.YANDEX_STATIC_ACCESS_KEY_SECRET }}
+          secret-access-key: ${{ secrets.YANDEX_STATIC_ACCESS_KEY_SECRET }}
           bucket: ${{ secrets.YANDEX_BUCKET }}
           working-directory: './dist'
           clear: false
