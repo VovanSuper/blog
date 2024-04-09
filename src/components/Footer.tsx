@@ -2,9 +2,10 @@ import { FacebookLogo, GitHubLogo, LinkedInLogo, SocialIcon, SocialUrls } from '
 
 const Footer = () => (
 	<footer className='mx-28 flex items-center justify-around p-10 xs:p-5'>
-		<div className='flex place-content-center place-items-center gap-3'>
-			<p className='text-xs text-linkSilver'>All right reserved (C)</p>
-			<p className='text-sm text-linkSilver'>
+		<div className='flex place-content-center place-items-center gap-3 text-linkSilver'>
+			<p className='text-xs'>All right reserved (C)</p>
+			<p className='text-xs'>{new Date().getFullYear()}</p>
+			<p className='text-sm'>
 				<a href='mailto:me@ovsyukov.ru'>Vladimir Ovsyukov</a>
 			</p>
 		</div>
