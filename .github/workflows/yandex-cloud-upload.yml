@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       # Build
-      - run: npm i
+      - run: npm i -f
       - run: npm run build
       # Deploy
       - uses: nekitcorp/yandex-storage-website-action@v2
