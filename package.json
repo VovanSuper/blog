@@ -2,15 +2,16 @@
 	"name": "ovsyukov.online",
 	"license": "MIT",
 	"private": true,
-	"version": "0.0.1",
+	"version": "0.2.1",
 	"engines": {
-		"node": ">14"
+		"node": ">20"
 	},
 	"author": {
 		"name": "Vladimir Ovsyukov",
-		"email": "me@ovsyukov.ru"
+		"email": "me@ovsyukov.ru",
+		"url": "https://www.ovsyukov.ru"
 	},
-	"description": "ovsyukov.ru  /  ovsyukov.online",
+	"description": "https://www.ovsyukov.ru site source code repository",
 	"scripts": {
 		"build": "tsc && vite build",
 		"commit": "cz",
@@ -35,7 +36,6 @@
 		"build-storybook": "build-storybook"
 	},
 	"dependencies": {
-		"@types/styled-components": "^5.1.24",
 		"firebase": "^9.6.10",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
@@ -52,15 +52,15 @@
 		"@babel/core": "^7.17.8",
 		"@nabla/vite-plugin-eslint": "1.4.0",
 		"@originjs/vite-plugin-commonjs": "^1.0.3",
-		"@storybook/addon-actions": "^6.5.0-alpha.52",
-		"@storybook/addon-essentials": "^6.5.0-alpha.52",
-		"@storybook/addon-interactions": "^6.5.0-alpha.52",
-		"@storybook/addon-links": "^6.5.0-alpha.52",
+		"@storybook/addon-actions": "^6.5.15",
+		"@storybook/addon-essentials": "^6.5.15",
+		"@storybook/addon-interactions": "^6.5.15",
+		"@storybook/addon-links": "^6.5.15",
 		"@storybook/builder-vite": "^0.1.22",
-		"@storybook/react": "^6.5.0-alpha.52",
+		"@storybook/react": "^6.5.15",
 		"@storybook/testing-library": "0.0.9",
 		"@tailwindcss/forms": "0.5.0",
-		"@testing-library/cypress": "8.0.2",
+		"@testing-library/cypress": "^9.0.0",
 		"@testing-library/dom": "8.11.4",
 		"@testing-library/jest-dom": "5.16.2",
 		"@testing-library/react": "12.1.4",
@@ -71,6 +71,7 @@
 		"@types/react-dom": "17.0.14",
 		"@types/react-router-dom": "5.3.3",
 		"@typescript-eslint/eslint-plugin": "5.16.0",
+		"@types/styled-components": "^5.1.24",
 		"@typescript-eslint/parser": "5.16.0",
 		"@vitejs/plugin-react": "1.2.0",
 		"autoprefixer": "10.4.4",
@@ -79,6 +80,7 @@
 		"commitizen": "4.2.4",
 		"css-mediaquery": "0.1.2",
 		"cz-conventional-changelog": "3.3.0",
+		"cypress": "^12.3.0",
 		"eslint": "8.11.0",
 		"eslint-config-airbnb": "19.0.4",
 		"eslint-config-airbnb-base": "15.0.0",

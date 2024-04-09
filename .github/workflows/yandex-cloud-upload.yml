@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [20.x]
     env:
       REACT_APP_PUBLIC_API_KEY: ${{ secrets.REACT_APP_PUBLIC_API_KEY }}
       REACT_APP_PUBLIC_AUTH_DOMAIN: ${{ secrets.REACT_APP_PUBLIC_AUTH_DOMAIN }}
@@ -21,18 +21,18 @@ jobs:
       REACT_APP_PUBLIC_APP_ID: ${{ secrets.REACT_APP_PUBLIC_APP_ID }}
       REACT_APP_PUBLIC_MEASUREMENT_ID: ${{ secrets.REACT_APP_PUBLIC_MEASUREMENT_ID }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       # Build
       - run: npm i
       - run: npm run build
       # Deploy
-      - uses: nekitcorp/yandex-storage-website-action@v1
+      - uses: nekitcorp/yandex-storage-website-action@v2
         with:
           accessKeyId: ${{ secrets.YANDEX_STATIC_ACCESS_KEY_ID }}
           secretAccessKey: ${{ secrets.YANDEX_STATIC_ACCESS_KEY_SECRET }}
           bucket: ${{ secrets.YANDEX_BUCKET }}
-          path: './dist'
+          working-directory: './dist'
           clear: false

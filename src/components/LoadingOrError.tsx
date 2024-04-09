@@ -18,8 +18,5 @@ const LoadingOrError = ({ error }: Properties): ReactElement => (
 		</h1>
 	</div>
 );
-LoadingOrError.defaultProps = {
-	error: undefined,
-};
 
 export default LoadingOrError;
