@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 const Logo: FC = () => {
 	const navigate = useNavigate();
+
 	return (
-		<div onClick={() => navigate('/', { replace: true })} role='link'>
+		<div onClick={() => navigate('/', { replace: true })} role='link' aria-label='Home'>
 			<svg className='group fill-linkNormal transition-transform hover:scale-110' width='55' height='40' viewBox='0 0 45 30' xmlns='http://www.w3.org/2000/svg'>
 				<path
 					className='fill-linkHover group-hover:fill-linkHover'

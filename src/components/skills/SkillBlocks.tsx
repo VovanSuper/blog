@@ -1,6 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable @typescript-eslint/no-confusing-void-expression */
 
+import type { FC } from 'react';
+
 const SkillMeterBlocks = 5;
 
 export interface SkillWrapperProps {
@@ -11,7 +13,7 @@ export interface SkillWrapperProps {
 	count?: number;
 }
 
-const SkillMeterBox = ({ count = SkillMeterBlocks }: { count: number; }) => (
+const SkillMeterBox: FC<{ count: number; }> = ({ count = SkillMeterBlocks }: { count: number; }) => (
 	<div className='container flex min-w-full justify-end gap-4'>
 		<div className='mx-4 font-bold leading-9 text-green900'>
 			<small className='m-1 mx-4 border-b-2 font-light text-linkHover'>Level: </small>
@@ -35,7 +37,7 @@ const SkillMeterBox = ({ count = SkillMeterBlocks }: { count: number; }) => (
 	</div>
 );
 
-const SkillBoxWrapper = ({ count = SkillMeterBlocks, title, skills, bg, color }: SkillWrapperProps) => (
+const SkillBoxWrapper: FC<SkillWrapperProps> = ({ count = SkillMeterBlocks, title, skills, bg, color }: SkillWrapperProps) => (
 	<div className='relative my-5 grid grid-cols-[1fr_7fr] xs:my-10'>
 		<div className='col-start-1 self-center font-bold text-dark700'>{title}</div>
 		<div className='skills-list '>
@@ -64,9 +66,9 @@ const SkillBoxWrapper = ({ count = SkillMeterBlocks, title, skills, bg, color }:
 	</div>
 );
 
-const LangSkills = () => <SkillBoxWrapper title='Programming Languages: ' skills={['Javascript / ES5 / ES2015', 'TypeScript', 'C#', 'Python', 'bash', 'php']} />;
+const LangSkills: FC = () => <SkillBoxWrapper title='Programming Languages: ' skills={['Javascript / ES5 / ES2015', 'TypeScript', 'C#', 'Python', 'bash', 'php']} />;
 
-const WebSkills = () => (
+const WebSkills: FC = () => (
 	<SkillBoxWrapper
 		title='Web: '
 		bg='bg-linkHover'
@@ -100,7 +102,7 @@ const WebSkills = () => (
 	/>
 );
 
-const MobileSkills = () => (
+const MobileSkills: FC = () => (
 	<SkillBoxWrapper
 		title='Mobile: '
 		bg='bg-linkBlack20'
@@ -110,9 +112,9 @@ const MobileSkills = () => (
 	/>
 );
 
-const CMSSkills = () => <SkillBoxWrapper count={3} title='CMS: ' bg='bg-dark900' color='text-dark100' skills={['Directus', 'Strapi', 'Contentful', 'WP']} />;
+const CMSSkills: FC = () => <SkillBoxWrapper count={3} title='CMS: ' bg='bg-dark900' color='text-dark100' skills={['Directus', 'Strapi', 'Contentful', 'WP']} />;
 
-const DbSkills = () => (
+const DbSkills: FC = () => (
 	<SkillBoxWrapper
 		title='Databases: '
 		bg='bg-dark100'
@@ -122,7 +124,7 @@ const DbSkills = () => (
 	/>
 );
 
-const OtherSkills = () => (
+const OtherSkills: FC = () => (
 	<SkillBoxWrapper
 		title='Other: '
 		bg='bg-green700'
@@ -151,7 +153,7 @@ const OtherSkills = () => (
 	/>
 );
 
-const CloudServices = () => (
+const CloudServices: FC = () => (
 	<SkillBoxWrapper
 		title='Cloud Services: '
 		bg='bg-bgBottom'
@@ -174,7 +176,7 @@ const CloudServices = () => (
 	/>
 );
 
-const BackEndSkills = () => (
+const BackEndSkills: FC = () => (
 	<SkillBoxWrapper
 		title='Backend: '
 		bg='bg-linkHover'
@@ -184,7 +186,7 @@ const BackEndSkills = () => (
 	/>
 );
 
-const TestsSkills = () => (
+const TestsSkills: FC = () => (
 	<SkillBoxWrapper
 		title='Testing: '
 		bg='bg-linkHover'
@@ -194,4 +196,5 @@ const TestsSkills = () => (
 	/>
 );
 
-export { SkillBoxWrapper, WebSkills, BackEndSkills, LangSkills, MobileSkills, CloudServices, CMSSkills, DbSkills, OtherSkills, TestsSkills };
+export { BackEndSkills, CMSSkills, CloudServices, DbSkills, LangSkills, MobileSkills, OtherSkills, SkillBoxWrapper, TestsSkills, WebSkills };
+

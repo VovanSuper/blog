@@ -4,6 +4,7 @@ import { FaSpinner } from 'react-icons/fa';
 interface Properties {
 	error?: Error;
 }
+
 const LoadingOrError = ({ error }: Properties): ReactElement => (
 	<div className='flex min-h-screen items-center justify-center'>
 		<h1 className='text-cyan-100 text-xl ' data-testid='LoadingOrError'>

@@ -1,4 +1,6 @@
-const LanguagesBlock = () => (
+import type { FC } from 'react';
+
+const LanguagesBlock: FC = () => (
 	<div className='skills grid  w-full'>
 		<h4 className='border-b-4 border-x-linkBlack50 pb-1 font-bold'>LANGUAGES</h4>
 		<section className='lang grid grid-cols-2'>

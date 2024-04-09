@@ -1,9 +1,9 @@
-import type { ReactElement } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 
 interface PanelProps {
-	children: ReactElement;
 	classes?: string;
 }
-const Panel = ({ children, classes = 'panel' }: PanelProps) => <div className={classes}>{children}</div>;
+
+const Panel: FC<PropsWithChildren<PanelProps>> = ({ classes = 'panel', children }) => <div className={classes}>{children}</div>;
 
 export default Panel;

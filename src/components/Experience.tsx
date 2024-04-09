@@ -1,3 +1,4 @@
+import type { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export interface ExperienceProps {
@@ -6,7 +7,7 @@ export interface ExperienceProps {
 	href?: string;
 }
 
-export default ({ title, def, href = '/about' }: ExperienceProps) => {
+const Experience: FC<ExperienceProps> = ({ title, def, href = '/about' }) => {
 	const navigate = useNavigate();
 
 	return (
@@ -45,3 +46,4 @@ export default ({ title, def, href = '/about' }: ExperienceProps) => {
 		</article>
 	);
 };
+export default Experience;

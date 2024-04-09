@@ -1,3 +1,4 @@
+import type { FC } from 'react';
 import type { ExperienceProps } from './Experience';
 import Experience from './Experience';
 import Panel from './Panel';
@@ -34,7 +35,7 @@ const experiences: ExperienceProps[] = [
 	},
 ];
 
-export default () => (
+const RightPanel: FC = () => (
 	<Panel
 		classes={`
     container
@@ -60,3 +61,4 @@ export default () => (
 		</div>
 	</Panel>
 );
+export default RightPanel;

@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+import type { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import Arrow from './Arrow';
 
@@ -6,7 +6,7 @@ interface ReachMeProps {
   href?: string;
 }
 
-const ReachMe = ({ href = '/contact' }: ReachMeProps) => (
+const ReachMe: FC<ReachMeProps> = ({ href = '/contact' }: ReachMeProps) => (
   <div
     className='
   group 

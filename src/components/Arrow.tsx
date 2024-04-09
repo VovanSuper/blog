@@ -1,6 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-unused-vars */
-export default ({ group }: { group: string; }) => (
+import type { FC } from 'react';
+
+export interface IArrowProps { group?: string; }
+
+const Arrow: FC<IArrowProps> = ({ group }) => (
 	<svg width='33' height='24' viewBox='0 0 33 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
 		<path
 			className={`
@@ -11,3 +13,4 @@ export default ({ group }: { group: string; }) => (
 		/>
 	</svg>
 );
+export default Arrow;

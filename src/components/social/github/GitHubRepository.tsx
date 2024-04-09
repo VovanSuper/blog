@@ -3,7 +3,7 @@ import { GitHubLogo } from '../SocialData';
 import RepoTag from './RepoTag';
 
 
-interface Props {
+interface IGhRepoProps {
   repo: string;
   name: string;
   commits: number;
@@ -13,7 +13,7 @@ interface Props {
   tags: string[];
 }
 
-const GitHubRepository: FC<Props> = ({
+const GitHubRepository: FC<IGhRepoProps> = ({
   repo,
   name,
   commits,

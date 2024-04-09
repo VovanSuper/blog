@@ -1,7 +1,7 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import App from 'App';
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { createRoot } from 'react-dom/client';
 // import { registerSW } from 'virtual:pwa-register';
 import './index.css';
 
@@ -17,11 +17,10 @@ const queryClient = new QueryClient({
 	},
 });
 
-ReactDOM.render(
+createRoot(document.querySelector('#root') as HTMLElement).render(
 	<StrictMode>
 		<QueryClientProvider client={queryClient}>
 			<App />
 		</QueryClientProvider>
-	</StrictMode>,
-	document.querySelector('#root')
+	</StrictMode>
 );

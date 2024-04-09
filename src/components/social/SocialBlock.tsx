@@ -1,7 +1,8 @@
+import type { FC } from 'react';
 import { FaEnvelope, FaFacebookSquare, FaGithubAlt, FaGlobe, FaLinkedin, FaMapMarkerAlt, FaPhone, FaStackExchange, FaTwitterSquare } from 'react-icons/fa';
 import { SocialIcon, SocialUrls } from './SocialData';
 
-const SocialBlock = () => (
+const SocialBlock: FC = () => (
 	<div className='social-data w-full rounded-md border-2 border-bgTop py-3 px-1 xl:px-5 xl:w-auto'>
 		<div className='leading-3'>
 			<SocialIcon

@@ -1,6 +1,11 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-export default ({ group, width }: { group?: string; width: number; }) => (
+import type { FC } from 'react';
+import type { IArrowProps } from './Arrow';
+
+interface IBigArrowProps extends IArrowProps {
+	width: number;
+}
+
+const ArrowBig: FC<IBigArrowProps> = ({ group, width }) => (
 	<div className='-mt-1'>
 		<svg width={width} height='24' viewBox={`0 0 ${width} 24`} fill='none' xmlns='http://www.w3.org/2000/svg'>
 			<path
@@ -14,3 +19,4 @@ export default ({ group, width }: { group?: string; width: number; }) => (
 		</svg>
 	</div>
 );
+export default ArrowBig;

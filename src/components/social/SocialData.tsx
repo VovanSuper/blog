@@ -1,12 +1,12 @@
-import type { ReactElement } from 'react';
+import type { FC, ReactElement } from 'react';
 
-interface SocialDataProps {
+interface ISocialDataProps {
 	url: string;
 	element: ReactElement;
 	isLast?: boolean;
-	footerIcons?: boolean;
+	isFooterIcons?: boolean;
 }
-const SocialIcon = ({ url, element, isLast = false, footerIcons = false }: SocialDataProps) => (
+const SocialIcon: FC<ISocialDataProps> = ({ url, element, isLast = false, isFooterIcons: footerIcons = false }: ISocialDataProps) => (
 	<a
 		className={`
       ${footerIcons && !isLast ? 'mx-8' : 'ml-8'}
@@ -77,6 +77,6 @@ export enum SocialUrls {
 	TEL = 'tel:+79620965480',
 }
 
-export type { SocialDataProps };
-export { SocialIcon, FacebookLogo, LinkedInLogo, GitHubLogo, CVLogo };
+export { CVLogo, FacebookLogo, GitHubLogo, LinkedInLogo, SocialIcon };
+export type { ISocialDataProps as SocialDataProps };
 

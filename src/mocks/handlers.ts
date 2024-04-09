@@ -1,6 +1,11 @@
-import { rest } from 'msw';
-import fruits from './data/fruits.json';
+import { http } from 'msw';
 
-const handlers = [rest.get('https://614c99f03c438c00179faa84.mockapi.io/fruits', (_, response, context) => response(context.json(fruits)))];
+const handlers = [
+  http.get('https://614c99f03c438c00179faa84.mockapi.io/fruits', (data) => new Response(JSON.stringify(data), {
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }))
+];
 
 export default handlers;

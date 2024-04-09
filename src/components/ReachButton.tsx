@@ -1,7 +1,8 @@
+import type { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ArrowBig from './ArrowBig';
 
-const ReachMeBig = () => {
+const ReachMeBig: FC = () => {
   const navigate = useNavigate();
   return (
     <div

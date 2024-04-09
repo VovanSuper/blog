@@ -1,5 +1,5 @@
-import type { ReactElement } from 'react';
+import type { FC, ReactElement } from 'react';
 
-const Blog = (): ReactElement => <div>Blog</div>;
+const Blog: FC = (): ReactElement => <div>Blog</div>;
 
 export default Blog;

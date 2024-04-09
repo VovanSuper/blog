@@ -1,4 +1,6 @@
-export default () => (
+import type { FC } from 'react';
+
+const Summary: FC = () => (
   <div className='user-info w-full'>
     <h2 className='mb-4 text-xl font-bold'>Summary:</h2>
     <ul className='list-disc text-sm font-light tracking-normal xl:font-semibold xl:tracking-wider'>
@@ -21,3 +23,4 @@ export default () => (
     <hr className='my-4 text-linkBlack20' />
   </div>
 );
+export default Summary;

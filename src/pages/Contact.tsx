@@ -8,14 +8,14 @@ import { useEffect, useRef, useState } from 'react';
 import { toast } from "react-toastify";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.REACT_APP_PUBLIC_API_KEY,
-  authDomain: import.meta.env.REACT_APP_PUBLIC_AUTH_DOMAIN,
-  databaseURL: import.meta.env.REACT_APP_PUBLIC_DB_URL,
-  projectId: import.meta.env.REACT_APP_PUBLIC_PROJECT_ID,
-  storageBucket: import.meta.env.REACT_APP_PUBLIC_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.REACT_APP_PUBLIC_MESSAGE_SENDER_ID,
-  appId: import.meta.env.REACT_APP_PUBLIC_APP_ID,
-  measurementId: import.meta.env.REACT_APP_PUBLIC_MEASUREMENT_ID,
+  apiKey: import.meta.env.REACT_APP_PUBLIC_API_KEY as string,
+  authDomain: import.meta.env.REACT_APP_PUBLIC_AUTH_DOMAIN as string,
+  databaseURL: import.meta.env.REACT_APP_PUBLIC_DB_URL as string,
+  projectId: import.meta.env.REACT_APP_PUBLIC_PROJECT_ID as string,
+  storageBucket: import.meta.env.REACT_APP_PUBLIC_STORAGE_BUCKET as string,
+  messagingSenderId: import.meta.env.REACT_APP_PUBLIC_MESSAGE_SENDER_ID as string,
+  appId: import.meta.env.REACT_APP_PUBLIC_APP_ID as string,
+  measurementId: import.meta.env.REACT_APP_PUBLIC_MEASUREMENT_ID as string,
 } as FirebaseOptions;
 
 const app = initializeApp(firebaseConfig);

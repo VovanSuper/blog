@@ -1,12 +1,10 @@
-import type { FC, HTMLAttributes, ReactChild } from 'react';
+import type { FC, HTMLAttributes, PropsWithChildren } from 'react';
 import Logo from './Logo';
 import Nav from './Nav';
 import ReachMe from './ReachMe';
 
 
-interface Props extends HTMLAttributes<HTMLHeadElement> {
-	children?: ReactChild;
-}
+type Props = HTMLAttributes<HTMLHeadElement>;
 
 const menuItems = [
 	{ title: 'Home', href: '/home' },
@@ -15,7 +13,7 @@ const menuItems = [
 	{ title: 'About', href: '/about' },
 ];
 
-const Head: FC<Props> = ({ children }: Props) => (
+const Head: FC<PropsWithChildren<Props>> = ({ children }: Props) => (
 	<header
 		className='
 			flex
