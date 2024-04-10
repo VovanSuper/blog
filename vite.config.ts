@@ -21,18 +21,19 @@ export default defineConfig(({ mode, command, }) => ({
 		outDir: path.join(import.meta.dirname, 'dist'),
 		assetsDir: 'assets',
 		manifest: true,
-		minify: false,
+		minify: 'esbuild',
 		sourcemap: 'inline',
 		write: true,
 		cssCodeSplit: true,
+		cssMinify: 'esbuild'
 	} : {},
+
 	test: {
 		include: ['src/**/__tests__/*'],
 		globals: true,
 		environment: 'jsdom',
 		setupFiles: 'src/setupTests.ts',
 		clearMocks: true,
-
 		coverage: {
 			enabled: true,
 			'100': true,

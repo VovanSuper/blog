@@ -35,4 +35,4 @@ jobs:
           secret-access-key: ${{ secrets.YANDEX_STATIC_ACCESS_KEY_SECRET }}
           bucket: ${{ secrets.YANDEX_BUCKET }}
           working-directory: './dist'
-          clear: false
+          clear: true
