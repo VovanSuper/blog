@@ -2,17 +2,30 @@
 import eslintPlugin from '@nabla/vite-plugin-eslint';
 import { viteCommonjs } from '@originjs/vite-plugin-commonjs';
 import react from '@vitejs/plugin-react';
+import path from 'node:path';
 import { defineConfig } from 'vite';
 import macrosPlugin from 'vite-plugin-babel-macros';
 import { VitePWA } from 'vite-plugin-pwa';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-export default defineConfig(({ mode }) => ({
+
+export default defineConfig(({ mode, }) => ({
 	define: {
 		'process.env': process.env
 	},
+	root: path.join(import.meta.dirname, 'src'),
 	envDir: process.cwd(),
 	envPrefix: 'REACT_APP_PUBLIC',
+	build: {
+		emptyOutDir: true,
+		outDir: path.join(import.meta.dirname, 'dist'),
+		assetsDir: 'assets',
+		manifest: true,
+		minify: false,
+		sourcemap: 'inline',
+		write: true,
+		cssCodeSplit: true,
+	},
 	test: {
 		include: ['src/**/__tests__/*'],
 		globals: true,
@@ -32,8 +45,9 @@ export default defineConfig(({ mode }) => ({
 		react(),
 		macrosPlugin(),
 		viteCommonjs(),
-		...(mode !== 'test'
-			? [
+		...(mode === 'test'
+			? []
+			: [
 				eslintPlugin(),
 				VitePWA({
 					registerType: 'autoUpdate',
@@ -55,7 +69,6 @@ export default defineConfig(({ mode }) => ({
 						],
 					},
 				}),
-			]
-			: []),
+			]),
 	],
 }));
