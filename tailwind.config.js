@@ -42,7 +42,7 @@ const greenColors = {
 };
 
 module.exports = {
-	content: ['public/index.html', 'src/**/*.tsx'],
+	content: ['src/**/*.tsx'],
 	theme: {
 		fontFamily: {
 			sans: ['Montserrat', ...defaultConfig.theme.fontFamily.sans],
