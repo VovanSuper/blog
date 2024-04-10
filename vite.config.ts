@@ -9,14 +9,14 @@ import { VitePWA } from 'vite-plugin-pwa';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 
-export default defineConfig(({ mode, }) => ({
+export default defineConfig(({ mode, command, }) => ({
 	define: {
 		'process.env': process.env
 	},
 	root: path.join(import.meta.dirname, 'src'),
 	envDir: process.cwd(),
 	envPrefix: 'REACT_APP_PUBLIC',
-	build: {
+	build: command === 'build' ? {
 		emptyOutDir: true,
 		outDir: path.join(import.meta.dirname, 'dist'),
 		assetsDir: 'assets',
@@ -25,7 +25,7 @@ export default defineConfig(({ mode, }) => ({
 		sourcemap: 'inline',
 		write: true,
 		cssCodeSplit: true,
-	},
+	} : {},
 	test: {
 		include: ['src/**/__tests__/*'],
 		globals: true,
