@@ -52,7 +52,7 @@ export default defineConfig(({ mode, command, }) => ({
 				eslintPlugin(),
 				VitePWA({
 					registerType: 'autoUpdate',
-					includeAssets: ['assets/*.*'],
+					includeAssets: ['src/assets/*.*'],
 					manifest: {
 						theme_color: '#BD34FE',
 						icons: [
