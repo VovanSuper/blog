@@ -22,7 +22,7 @@ const ReachMe: FC<ReachMeProps> = ({ href = '/contact' }: ReachMeProps) => (
   >
     <NavLink className='flex gap-2' to={href}>
       <Arrow group='group' />
-      <span className='hidden md:block group-hover:text-linkWhite'>Reach Me </span>
+      <span className='hidden md:block group-hover:text-linkWhite'>Reach Me (NOW)!!! </span>
     </NavLink>
   </div>
 );
